@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	  KC_TAB,         KC_QUOTE,      KC_COMMA,   KC_DOT,       KC_P,    KC_Y,    MEH(KC_2),
 	  MO(SHELL_NAV),  KC_A,          KC_O,       KC_E,         KC_U,    KC_I,
 	  MEH(KC_0),      KC_SCOLON,     KC_Q,       KC_J,         KC_K,    KC_X,    MEH(KC_3),
-	  MEH(KC_1),      OSM(MOD_LSFT), OSM(MOD_LCTL),  KC_GUI, KC_LCTRL,
+	  MEH(KC_1),      OSM(MOD_LSFT), OSM(MOD_LCTL),  KC_LGUI, KC_LCTRL,
 
 	  // left thumb cluster
 	            MEH(KC_4),      MEH(KC_5),
@@ -53,14 +53,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	  MO(COMBINED),MO(KEYNAV),  OSM(MOD_LALT),
 
 	  // right hand
-	  KC_F7,     KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, MEH(KC_9),
+	  KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_BSPC,
 	  MEH(KC_7), KC_F,  KC_G,  KC_C,   KC_R,   KC_L,   MEH(KC_F1),
 			     KC_D,  KC_H,  KC_T,   KC_N,   KC_S,   MEH(KC_F2),
 	  MEH(KC_8), KC_B,  KC_M,  KC_W,   KC_V,   KC_Z,   MEH(KC_F3),
 	  KC_SPC, KC_LALT, KC_CAPSLOCK, OSM(MOD_LSFT),MEH(KC_F4),
 
 	  // right thumb cluster
-	  MEH(KC_F5),MEH(KC_F6),MEH(KC_F7),MEH(KC_F8),KC_ENTER,KC_SPACE
+	  MEH(KC_F5),MEH(KC_F6),MEH(KC_F7),MEH(KC_F8),KC_ENTER,KC_ENTER
 
   ),
 
