@@ -57,10 +57,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	  MEH(KC_7), KC_F,  KC_G,  KC_C,   KC_R,   KC_L,   MEH(KC_F1),
 			     KC_D,  KC_H,  KC_T,   KC_N,   KC_S,   MEH(KC_F2),
 	  MEH(KC_8), KC_B,  KC_M,  KC_W,   KC_V,   KC_Z,   MEH(KC_F3),
-	  KC_SPC, KC_LALT, KC_CAPSLOCK, OSM(MOD_LSFT),MEH(KC_F4),
+	  KC_LALT, KC_LALT, KC_CAPSLOCK, OSM(MOD_LSFT),MEH(KC_F4),
 
 	  // right thumb cluster
-	  MEH(KC_F5),MEH(KC_F6),MEH(KC_F7),MEH(KC_F8),KC_ENTER,KC_ENTER
+	  MEH(KC_F5),MEH(KC_F6),MEH(KC_F7),MEH(KC_F8),KC_ENTER,KC_SPC
 
   ),
 
