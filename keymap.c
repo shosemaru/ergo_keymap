@@ -41,23 +41,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [BASE] = KEYMAP(
 	  // left hand
-	  KC_ESC,         KC_1,         KC_2,      KC_3,        KC_4,   KC_5,   KC_NO,
-	  KC_TAB,         KC_QUOTE,     KC_COMMA,  KC_DOT,      KC_P,   KC_Y,   KC_NO,
-	  KC_NO,          KC_A,          KC_O,       KC_E,      KC_U,    KC_I,
-	  KC_NO,          KC_SCOLON,     KC_Q,       KC_J,      KC_K,    KC_X,  KC_NO,
-	  KC_NO,          KC_NO,         KC_NO,    KC_LGUI,     KC_LANG2（KC_LCTRL）,
+	  KC_ESC,         KC_1,         KC_2,       KC_3,      KC_4,     KC_5,   KC_NO,
+	  KC_TAB,         KC_QUOTE,     KC_COMMA,   KC_DOT,    KC_P,     KC_Y,   KC_DOWN,
+	  KC_LCTRL,          KC_A,         KC_O,       KC_E,      KC_U,     KC_I,
+	  KC_LSFT,         KC_SCOLON,    KC_Q,       KC_J,      KC_K,     KC_X,   KC_LEFT,
+	  KC_NO,          KC_NO,        KC_NO,      KC_LGUI,   KC_LANG2,
 
 	  // left thumb cluster
-	            MEH(KC_4),      MEH(KC_5),
-	                            MEH(KC_6),
+	            KC_NO,    KC_NO,
+	                       KC_NO,
 	  KC_ENTER ,MO(KEYNAV),  OSM(MOD_LALT),
 
 	  // right hand
-	  KC_NO, KC_6, KC_7, KC_8, KC_9, KC_0, KC_NO,
-	  KC_NO, KC_F,  KC_G,  KC_C,   KC_R,   KC_L,   KC_NO,
-			     KC_D,  KC_H,  KC_T,   KC_N,   KC_S,   KC_NO,
-	  KC_NO, KC_B,  KC_M,  KC_W,   KC_V,   KC_Z,   KC_NO,
-	  KC_LANG1（KC_LALT）, KC_NO, KC_NO, KC_NO, RESET,
+	  KC_FN1, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC,
+	  KC_UP, KC_F,  KC_G,  KC_C,   KC_R,   KC_L,   KC_LBRC ,
+			     KC_D,  KC_H,  KC_T,   KC_N,   KC_S,   KC_MINS,
+	  KC_RIGHT, KC_B,  KC_M,  KC_W,   KC_V,   KC_Z,   KC_ENTER,
+	  KC_LANG1, KC_NO, KC_NO, KC_NO, KC_NO,
 
 	  // right thumb cluster
 	  MEH(KC_F5),MEH(KC_F6),MEH(KC_F7),MEH(KC_F8),KC_ENTER,KC_SPC
@@ -66,20 +66,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [KEYNAV] = KEYMAP(
 	// left hand
-	KC_TRNS,KC_TRNS,     KC_TRNS,     KC_TRNS,      KC_TRNS,    KC_TRNS,     KC_TRNS,
-	KC_TRNS,KC_ESC,      MEH(KC_F9),  RCTL(KC_Z),   RCTL(KC_S), MEH(KC_F10), KC_TRNS,
-	KC_TRNS,MEH(KC_F11), MEH(KC_F12), RSFT(KC_TAB), KC_TAB,     MEH(KC_A),
-	KC_TRNS,MEH(KC_B),   MEH(KC_C),   MEH(KC_D),    MEH(KC_E),  MEH(KC_F),   KC_TRNS,
-	KC_TRNS,KC_TRNS,     KC_TRNS,     KC_TRNS,      KC_TRNS,
+  KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_F6,  KC_NO,
+  KC_TRNS,KC_EXLM,KC_AT,  KC_LCBR,KC_RCBR,KC_PIPE,KC_TRNS,
+  RESET,  KC_HASH,KC_DLR, KC_LPRN,KC_RPRN,KC_GRV,
+  KC_TRNS,KC_PERC,KC_CIRC,KC_LBRC,KC_RBRC,KC_TILD,KC_TRNS,
+  KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
 	// left thumb cluster
 	KC_TRNS,KC_TRNS,KC_TRNS,TO(MOUSE),KC_TRNS,KC_TRNS,
 
 	// right hand
-	KC_TRNS,KC_TRNS,       KC_TRNS,    KC_TRNS,         KC_TRNS,    KC_TRNS,         MEH(KC_G),
-	KC_TRNS,KC_NO,         KC_HOME,    KC_UP,           KC_END,     KC_PGUP,         MEH(KC_H),
-	        LCTL(KC_LEFT), KC_LEFT,    KC_DOWN,         KC_RIGHT,   LCTL(KC_RIGHT),  MEH(KC_I),
-	KC_TRNS,KC_NO,         RCTL(KC_C), RCTL(KC_X),      RCTL(KC_V), KC_PGDOWN,       MEH(KC_J),
-	                       KC_BSPC,   RCTL(KC_BSPC),    KC_DELETE,  LCTL(KC_DELETE), MEH(KC_K),
+  KC_TRNS, KC_F7,   KC_F8,  KC_F9,   KC_F10,  KC_F11,  KC_F12,
+  KC_TRNS, KC_UP,   KC_7,   KC_8,    KC_9,    KC_ASTR, KC_TRNS,
+  KC_DOWN, KC_4,   KC_5,    KC_6,    KC_PLUS, KC_TRNS,
+  KC_TRNS, KC_AMPR, KC_1,   KC_2,    KC_3,    KC_BSLS, KC_TRNS,
+  KC_TRNS,KC_DOT,  KC_0,    KC_EQL,  KC_TRNS,
 
 	// right thumb cluster
 	KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS
