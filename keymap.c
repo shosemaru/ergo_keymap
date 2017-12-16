@@ -14,7 +14,7 @@ enum custom_keycodes {
   EPRM,
   VRSN,
   RGB_SLD,
-  
+
 };
 
 
@@ -41,50 +41,50 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [BASE] = KEYMAP(
 	  // left hand
-	  KC_ESC,         KC_F1,         KC_F2,      KC_F3,        KC_F4,   KC_F5,   KC_F6,
-	  KC_TAB,         KC_QUOTE,      KC_COMMA,   KC_DOT,       KC_P,    KC_Y,    MEH(KC_2),
-	  MO(SHELL_NAV),  KC_A,          KC_O,       KC_E,         KC_U,    KC_I,
-	  MEH(KC_0),      KC_SCOLON,     KC_Q,       KC_J,         KC_K,    KC_X,    MEH(KC_3),
-	  MEH(KC_1),      OSM(MOD_LSFT), OSM(MOD_LCTL), M(MOUSE_TOGGLE), MO(KEYSEL),
-	  
+	  KC_ESC,         KC_1,         KC_2,       KC_3,      KC_4,     KC_5,   KC_NO,
+	  KC_TAB,         KC_QUOTE,     KC_COMMA,   KC_DOT,    KC_P,     KC_Y,   KC_DOWN,
+	  KC_LCTRL,          KC_A,         KC_O,       KC_E,      KC_U,     KC_I,
+	  KC_LSFT,         KC_SCOLON,    KC_Q,       KC_J,      KC_K,     KC_X,   KC_LEFT,
+	  KC_NO,          KC_NO,        KC_NO,      KC_LGUI,   KC_LANG2,
+
 	  // left thumb cluster
-	            MEH(KC_4),      MEH(KC_5),
-	                            MEH(KC_6),
-	  MO(COMBINED),MO(KEYNAV),  OSM(MOD_LALT),
-	  
+	            KC_NO,    KC_NO,
+	                       KC_NO,
+	  KC_ENTER ,MO(KEYNAV),  OSM(MOD_LALT),
+
 	  // right hand
-	  KC_F7,     KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, MEH(KC_9),
-	  MEH(KC_7), KC_F,  KC_G,  KC_C,   KC_R,   KC_L,   MEH(KC_F1),
-			     KC_D,  KC_H,  KC_T,   KC_N,   KC_S,   MEH(KC_F2),
-	  MEH(KC_8), KC_B,  KC_M,  KC_W,   KC_V,   KC_Z,   MEH(KC_F3),
-	  KC_BSPC,   RCTL(KC_BSPC), KC_CAPSLOCK, OSM(MOD_LSFT),MEH(KC_F4),
-    
+	  KC_FN1, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC,
+	  KC_UP, KC_F,  KC_G,  KC_C,   KC_R,   KC_L,   KC_LBRC ,
+			     KC_D,  KC_H,  KC_T,   KC_N,   KC_S,   KC_MINS,
+	  KC_RIGHT, KC_B,  KC_M,  KC_W,   KC_V,   KC_Z,   KC_ENTER,
+	  KC_LANG1, KC_NO, KC_NO, KC_NO, KC_NO,
+
 	  // right thumb cluster
-	  MEH(KC_F5),MEH(KC_F6),MEH(KC_F7),MEH(KC_F8),KC_ENTER,KC_SPACE
-  
+	  MEH(KC_F5),MEH(KC_F6),MEH(KC_F7),MEH(KC_F8),KC_ENTER,KC_SPC
+
   ),
-  
+
   [KEYNAV] = KEYMAP(
 	// left hand
-	KC_TRNS,KC_TRNS,     KC_TRNS,     KC_TRNS,      KC_TRNS,    KC_TRNS,     KC_TRNS,
-	KC_TRNS,KC_ESC,      MEH(KC_F9),  RCTL(KC_Z),   RCTL(KC_S), MEH(KC_F10), KC_TRNS,
-	KC_TRNS,MEH(KC_F11), MEH(KC_F12), RSFT(KC_TAB), KC_TAB,     MEH(KC_A),
-	KC_TRNS,MEH(KC_B),   MEH(KC_C),   MEH(KC_D),    MEH(KC_E),  MEH(KC_F),   KC_TRNS,
-	KC_TRNS,KC_TRNS,     KC_TRNS,     KC_TRNS,      KC_TRNS,
+  KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_F6,  KC_NO,
+  KC_TRNS,KC_EXLM,KC_AT,  KC_LCBR,KC_RCBR,KC_PIPE,KC_TRNS,
+  RESET,  KC_HASH,KC_DLR, KC_LPRN,KC_RPRN,KC_GRV,
+  KC_TRNS,KC_PERC,KC_CIRC,KC_LBRC,KC_RBRC,KC_TILD,KC_TRNS,
+  KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
 	// left thumb cluster
 	KC_TRNS,KC_TRNS,KC_TRNS,TO(MOUSE),KC_TRNS,KC_TRNS,
-	
+
 	// right hand
-	KC_TRNS,KC_TRNS,       KC_TRNS,    KC_TRNS,         KC_TRNS,    KC_TRNS,         MEH(KC_G),
-	KC_TRNS,KC_NO,         KC_HOME,    KC_UP,           KC_END,     KC_PGUP,         MEH(KC_H),
-	        LCTL(KC_LEFT), KC_LEFT,    KC_DOWN,         KC_RIGHT,   LCTL(KC_RIGHT),  MEH(KC_I),
-	KC_TRNS,KC_NO,         RCTL(KC_C), RCTL(KC_X),      RCTL(KC_V), KC_PGDOWN,       MEH(KC_J),
-	                       KC_BSPC,   RCTL(KC_BSPC),    KC_DELETE,  LCTL(KC_DELETE), MEH(KC_K),
-	
+  KC_TRNS, KC_F7,   KC_F8,  KC_F9,   KC_F10,  KC_F11,  KC_F12,
+  KC_TRNS, KC_UP,   KC_7,   KC_8,    KC_9,    KC_ASTR, KC_TRNS,
+  KC_DOWN, KC_4,   KC_5,    KC_6,    KC_PLUS, KC_TRNS,
+  KC_TRNS, KC_AMPR, KC_1,   KC_2,    KC_3,    KC_BSLS, KC_TRNS,
+  KC_TRNS,KC_DOT,  KC_0,    KC_EQL,  KC_TRNS,
+
 	// right thumb cluster
 	KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS
-  ),  
-  
+  ),
+
 	// key selection layer
 	[KEYSEL] = KEYMAP(
 		   // left hand
@@ -109,8 +109,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		   KC_TRNS, KC_TRNS,
 		   KC_TRNS,
 		   KC_TRNS, KC_TRNS, KC_TRNS
-	),  
-  
+	),
+
   // shell navigation layer
   [SHELL_NAV] = KEYMAP(
        // left hand
@@ -136,11 +136,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_TRNS,
        KC_TRNS, KC_TRNS, KC_TRNS
   ),
-  
 
-  
+
+
   [COMBINED] = KEYMAP(
-  
+
 	// left hand
 	KC_NO,  KC_TRNS, KC_TRNS,    KC_TRNS,     KC_TRNS,     KC_TRNS,KC_TRNS,
 	KC_TRNS,KC_ESC,  KC_LABK,    KC_RABK,     KC_DQUO,     KC_GRAVE,KC_TRNS,
@@ -150,25 +150,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
 	// thumb cluster
 	KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
-	
+
 	// right hand
 	KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     MEH(KC_L),
 	KC_TRNS, KC_PLUS,     KC_7,    KC_8,    KC_9,    KC_ASTR,     MEH(KC_M),
 	         KC_MINS,     KC_4,    KC_5,    KC_6,    KC_SLSH,     MEH(KC_N),
 	KC_TRNS, KC_EQUAL,    KC_1,    KC_2,    KC_3,    KC_QUES,     MEH(KC_O),
-	// bottom row 
+	// bottom row
 	                      KC_0,  KC_DOT,  KC_TRNS, KC_TRNS,     MEH(KC_P),
 	// thumb cluster
 	KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS),
-  
-  
+
+
 	[MOUSE] = KEYMAP(
 		   KC_TRNS, KC_TRNS,      KC_TRNS,       KC_TRNS,       KC_TRNS,      KC_TRNS, KC_TRNS,
 		   KC_TRNS, KC_TRNS,      KC_PGUP,       KC_MS_WH_UP,   KC_UP,        KC_TRNS, KC_TRNS,
 		   KC_TRNS, KC_MS_ACCEL0, KC_PGDN,       KC_MS_WH_DOWN, KC_DOWN,      KC_TRNS,
 		   KC_TRNS, KC_TRNS,      KC_TRNS,       KC_TRNS,       KC_TRNS,      KC_TRNS, KC_TRNS,
 		   KC_TRNS, KC_TRNS,      M(MOUSE_LOCK), KC_TRNS,       KC_MS_ACCEL0,
-		   
+
 											   KC_TRNS, KC_TRNS,
 														KC_TRNS,
 									  KC_TRNS, KC_BTN3, KC_TRNS,
@@ -182,8 +182,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		   KC_TRNS, KC_TRNS,
 		   KC_TRNS,
 		   KC_TRNS, KC_BTN1, KC_BTN2
-	),  
-	
+	),
+
 
 };
 
@@ -218,17 +218,17 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
         case SCREEN_TAB_LEFT:
             if (record->event.pressed) {
                 return MACRO( D(LCTL), T(A), U(LCTL), T(P), END);
-            }        
+            }
             break;
         case SCREEN_TAB_RIGHT:
              if (record->event.pressed) {
                 return MACRO( D(LCTL), T(A), U(LCTL), T(N), END);
-            }                    
+            }
             break;
         case SCREEN_NEW_TAB:
              if (record->event.pressed) {
                 return MACRO( D(LCTL), T(A), U(LCTL), T(C), END);
-            }                                
+            }
         break;
         case SCREEN_COPY_MODE:
             if (record->event.pressed) {
@@ -237,26 +237,26 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
         break;
         case SCREEN_PASTE:
             if (record->event.pressed) {
-                return MACRO( D(LCTL), T(A), U(LCTL), T(RBRC), END); 
+                return MACRO( D(LCTL), T(A), U(LCTL), T(RBRC), END);
             }
-        break;        
+        break;
         case SWITCH_NDS:
             if (record->event.pressed) {
-                return MACRO( D(LSFT), 
-							  T(F11), 
-							  U(LSFT), 
-							  W(255), 
-							  D(LALT), 
-							  T(TAB), 
-							  U(LALT), 
-							  END); 
-            }                                
-        break;        
+                return MACRO( D(LSFT),
+							  T(F11),
+							  U(LSFT),
+							  W(255),
+							  D(LALT),
+							  T(TAB),
+							  U(LALT),
+							  END);
+            }
+        break;
         case SHELL_RECALL_LAST_ARG_REMOVE_FIRST_COMMAND:
             if (record->event.pressed) {
                 return MACRO( T(UP), T(HOME), D(LALT), T(D), U(LALT), END);
             }
-        break;                                
+        break;
       }
     return MACRO_NONE;
 };
@@ -282,7 +282,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       return false;
       break;
-    
+
   }
   return true;
 }
@@ -304,7 +304,7 @@ void matrix_scan_user(void) {
     ergodox_right_led_3_off();
     switch (layer) {
 		case COMBINED:
-		    ergodox_right_led_2_on();		
+		    ergodox_right_led_2_on();
 			break;
 	    case KEYNAV:
 		case KEYSEL:
